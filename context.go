@@ -822,3 +822,13 @@ func (dc *Context) Pop() {
 	dc.current = before.current
 	dc.hasCurrent = before.hasCurrent
 }
+
+// SetMatrix sets new transform matrix to context
+func (dc *Context) SetMatrix(mx Matrix) {
+	dc.matrix = mx
+}
+
+// Matrix retrieves current transform matrix
+func (dc *Context) Matrix() Matrix {
+	return dc.matrix
+}
